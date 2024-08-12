@@ -1,0 +1,573 @@
+openapi: 3.0.0
+info:
+  title: "V1"
+  description: "V1"
+  version: "20240722173746"
+servers:
+  - url: http://localhost/iServiceKBNETFrameworkLocal/API/V1
+paths:
+  /FaturaPrevista:
+    post:
+      tags:
+        - API  
+      operationId: "API.V1.FaturaPrevista"
+      summary: "FaturaPrevista"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FaturaPrevistaInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FaturaPrevistaOutput"
+        404:
+          description: "Not found"
+
+  /FaturamentoRealizado:
+    post:
+      tags:
+        - API  
+      operationId: "API.V1.FaturamentoRealizado"
+      summary: "FaturamentoRealizado"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FaturamentoRealizadoInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FaturamentoRealizadoOutput"
+        404:
+          description: "Not found"
+
+  /DadosMedicao:
+    post:
+      tags:
+        - API  
+      operationId: "API.V1.DadosMedicao"
+      summary: "DadosMedicao"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DadosMedicaoInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DadosMedicaoOutput"
+        404:
+          description: "Not found"
+
+  /MarcacaoPonto:
+    post:
+      tags:
+        - API  
+      operationId: "API.V1.MarcacaoPonto"
+      summary: "MarcacaoPonto"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MarcacaoPontoInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MarcacaoPontoOutput"
+        404:
+          description: "Not found"
+
+  /InclusaoEmpresa:
+    post:
+      tags:
+        - API  
+      operationId: "API.V1.InclusaoEmpresa"
+      summary: "InclusaoEmpresa"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InclusaoEmpresaInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: "string"
+
+
+        404:
+          description: "Not found"
+
+  /AnexosMedicao:
+    post:
+      tags:
+        - API  
+      operationId: "API.V1.AnexosMedicao"
+      summary: "AnexosMedicao"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AnexosMedicaoInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnexosMedicaoOutput"
+        404:
+          description: "Not found"
+
+components:
+  schemas:
+    FaturaPrevistaOutput:
+      properties:
+        Faturas:
+          description: "Fatura WS"
+          type: array
+          items:
+            $ref: "#/components/schemas/API.FaturaWS"
+        Retorno:
+          type: "string"
+
+    FaturamentoRealizadoOutput:
+      properties:
+        Faturas:
+          description: "Fatura WS"
+          type: array
+          items:
+            $ref: "#/components/schemas/API.FaturaWS"
+        Retorno:
+          type: "string"
+
+    DadosMedicaoOutput:
+      properties:
+        Medicoes:
+          description: "Medicao WS"
+          type: array
+          items:
+            $ref: "#/components/schemas/API.MedicaoWS"
+        Retorno:
+          type: "string"
+
+    MarcacaoPontoOutput:
+      properties:
+        Marcacoes:
+          description: "Marcacao Ponto WS"
+          type: array
+          items:
+            $ref: "#/components/schemas/API.MarcacaoPontoWS"
+        Retorno:
+          type: "string"
+
+
+    AnexosMedicaoOutput:
+      properties:
+        Medicoes:
+          description: "Medicao WS"
+          type: array
+          items:
+            $ref: "#/components/schemas/API.MedicaoWS"
+        Retorno:
+          type: "string"
+
+    FaturaPrevistaInput:  
+      properties:
+        EmpresaCNPJ:
+          type: "string"
+        ClienteCNPJ:
+          type: "string"
+        Inicio:
+          type: "string"
+          format: "date"
+        Fim:
+          type: "string"
+          format: "date"
+
+    FaturamentoRealizadoInput:  
+      properties:
+        EmpresaCNPJ:
+          type: "string"
+        ClienteCNPJ:
+          type: "string"
+        Inicio:
+          type: "string"
+          format: "date"
+        Fim:
+          type: "string"
+          format: "date"
+
+    DadosMedicaoInput:  
+      properties:
+        Dominio:
+          type: "string"
+        CNPJ:
+          type: "string"
+        De:
+          type: "string"
+          format: "date-time"
+        Ate:
+          type: "string"
+          format: "date-time"
+
+    MarcacaoPontoInput:  
+      properties:
+        EmpresaCNPJ:
+          type: "string"
+        Inicio:
+          type: "string"
+          format: "date"
+        Fim:
+          type: "string"
+          format: "date"
+
+    InclusaoEmpresaInput:  
+      properties:
+        Dominio:
+          type: "string"
+        Nome:
+          type: "string"
+        CNPJ:
+          type: "string"
+        Email:
+          type: "string"
+        Telefone:
+          type: "string"
+        CodigoIntegracao:
+          type: "string"
+
+    AnexosMedicaoInput:  
+      properties:
+        Dominio:
+          type: "string"
+        CNPJ:
+          type: "string"
+        De:
+          type: "string"
+          format: "date-time"
+        Ate:
+          type: "string"
+          format: "date-time"
+  
+    API.FaturaWS:
+      properties:
+        ContratoId:
+          description: "Contrato Id"
+          type: "integer"
+          format: "int64"
+        ContratoNome:
+          description: "Nome"
+          type: "string"
+        ClienteId:
+          description: "Id"
+          type: "integer"
+          format: "int64"
+        ClienteNome:
+          description: "Nome"
+          type: "string"
+
+        Parcelas:
+          type: array
+          items:
+            description: Parcelas
+            $ref: "#/components/schemas/API.FaturaWS.Parcelas_Parcelas"
+
+
+    API.FaturaWS.Parcelas_Parcelas:
+      properties:
+        FaturaId:
+          description: "Fatura Id"
+          type: "integer"
+          format: "int64"
+        FaturaParcela:
+          description: "Fatura Parcela"
+          type: "integer"
+          format: "int32"
+        FaturaVencimento:
+          description: "Fatura Vencimento"
+          type: "string"
+          format: "date"
+        FaturaValor:
+          description: "Fatura Valor"
+          type: "number"
+          format: "double"
+        Previsto:
+          description: "Previsto"
+          type: "string"
+          format: "date"
+        DtFaturamento:
+          description: "Dt Faturamento"
+          type: "string"
+          format: "date-time"
+        FaturaValorFaturado:
+          description: "Fatura Valor Faturado"
+          type: "number"
+          format: "double"
+
+
+      x-gx-level: "FaturaWS"
+
+    API.MedicaoWS:
+      properties:
+        MedicaoId:
+          description: "Medicao Id"
+          type: "integer"
+          format: "int64"
+        MedicaoDtHora:
+          description: "Data"
+          type: "string"
+          format: "date-time"
+        MedicaoMesAno:
+          description: "Mes/Ano"
+          type: "string"
+        MedicaoContratoId:
+          description: "Medicao Contrato Id"
+          type: "integer"
+          format: "int64"
+        MedicaoContratoNome:
+          description: "Nome"
+          type: "string"
+        MedicaoUsuarioId:
+          description: "Feito por"
+          type: "integer"
+          format: "int64"
+        MedicaoUsuarioNome:
+          description: "Usuário"
+          type: "string"
+        MedicaoDtHoraIntegracao:
+          description: "Dt Hora Integração"
+          type: "string"
+          format: "date-time"
+        ContratoCI:
+          description: "Contrato CI"
+          type: "string"
+
+        Produtos:
+          type: array
+          items:
+            description: Produto
+            $ref: "#/components/schemas/API.MedicaoWS.Produtos_Produto"
+
+        Profissionais:
+          type: array
+          items:
+            description: Profissional
+            $ref: "#/components/schemas/API.MedicaoWS.Profissionais_Profissional"
+
+        TipoServicos:
+          type: array
+          items:
+            description: TipoServico
+            $ref: "#/components/schemas/API.MedicaoWS.TipoServicos_TipoServico"
+
+        Anexos:
+          type: array
+          items:
+            description: Anexo
+            $ref: "#/components/schemas/API.MedicaoWS.Anexos_Anexo"
+
+
+    API.MedicaoWS.Produtos_Produto:
+      properties:
+        MedicaoProdutoId:
+          description: "Medicao Produto Id"
+          type: "integer"
+          format: "int64"
+        MedicaoProdutoNome:
+          description: "Produto"
+          type: "string"
+        MedicaoProdutoPreco:
+          description: "Preço"
+          type: "number"
+          format: "double"
+        MedicaoProdutoUn:
+          description: "Unidade"
+          type: "string"
+        MedicaoQtd:
+          description: "Qtd"
+          type: "number"
+          format: "double"
+        MedicaoProdutoQtdInicial:
+          description: "Qtd Inicial"
+          type: "number"
+          format: "double"
+        MedicaoProdutoSaldo:
+          description: "Saldo"
+          type: "number"
+          format: "double"
+        ProdutoCI:
+          description: "Produto CI"
+          type: "string"
+
+
+      x-gx-level: "MedicaoWS"
+
+
+    API.MedicaoWS.Profissionais_Profissional:
+      properties:
+        MedicaoFuncaoId:
+          description: "Medicao Funcao Id"
+          type: "integer"
+          format: "int64"
+        MedicaoFuncaoNome:
+          description: "Profissional"
+          type: "string"
+        MedicaoHoras:
+          description: "Medição"
+          type: "integer"
+          format: "int64"
+        MedicaoDiferenca:
+          description: "Diferença"
+          type: "integer"
+          format: "int64"
+        MedicaoProfissionalQtd:
+          description: "Qtd"
+          type: "integer"
+          format: "int64"
+        MedicaoProfissionalHoraMes:
+          description: "Hora/Mês"
+          type: "integer"
+          format: "int64"
+        MedicaoProfissionalValor:
+          description: "Valor"
+          type: "number"
+          format: "double"
+        MedicaoProfissionalTotal:
+          description: "Total"
+          type: "number"
+          format: "double"
+        MedicaoProfissionalSaldo:
+          description: "Saldo"
+          type: "integer"
+          format: "int64"
+        ProfissionalCI:
+          description: "Profissional CI"
+          type: "string"
+
+
+      x-gx-level: "MedicaoWS"
+
+
+    API.MedicaoWS.TipoServicos_TipoServico:
+      properties:
+        MedicaoTipoServicoId:
+          description: "Tipo de Serviço"
+          type: "integer"
+          format: "int64"
+        MedicaoTipoServicoNome:
+          description: "Tipo de Serviço"
+          type: "string"
+        MedicaoUnidadeId:
+          description: "Unidade"
+          type: "integer"
+          format: "int64"
+        MedicaoUnidadeAbreviacao:
+          description: "Unidade"
+          type: "string"
+        MedicaoTipoServicoQtd:
+          description: "Quantidade"
+          type: "number"
+          format: "double"
+        MedicaoTipoServicoValor:
+          description: "Medicao Tipo Servico Valor"
+          type: "number"
+          format: "double"
+        TipoServicoCI:
+          description: "Tipo Servico CI"
+          type: "string"
+
+
+      x-gx-level: "MedicaoWS"
+
+
+    API.MedicaoWS.Anexos_Anexo:
+      properties:
+        AnexoId:
+          description: "Anexo Id"
+          type: "integer"
+          format: "int64"
+        Url:
+          description: "Url"
+          type: "string"
+
+
+      x-gx-level: "MedicaoWS"
+
+    API.MarcacaoPontoWS:
+      properties:
+        PontoEletronicoId:
+          description: "Ponto Eletronico Id"
+          type: "integer"
+          format: "int64"
+        PontoEletronicoData:
+          description: "Ponto Eletronico Data"
+          type: "string"
+          format: "date"
+        IdUsuario:
+          description: "Id"
+          type: "integer"
+          format: "int64"
+        NomeUsuario:
+          description: "Nome"
+          type: "string"
+        PontoEletronicoDiaSemana:
+          description: "Ponto Eletronico Dia Semana"
+          type: "string"
+        PontoEletronicoTotalHoras:
+          description: "Ponto Eletronico Total Horas"
+          type: "integer"
+          format: "int32"
+
+        Pontos:
+          type: array
+          items:
+            description: Pontos
+            $ref: "#/components/schemas/API.MarcacaoPontoWS.Pontos_Pontos"
+
+
+    API.MarcacaoPontoWS.Pontos_Pontos:
+      properties:
+        PontoMarcacaoId:
+          description: "Ponto Marcacao Id"
+          type: "integer"
+          format: "int64"
+        PontoMarcacaoDtHora:
+          description: "Ponto Marcacao yDt Hora"
+          type: "string"
+          format: "date-time"
+        Hora:
+          description: "Hora"
+          type: "string"
+
+
+      x-gx-level: "MarcacaoPontoWS"
+
+ 
