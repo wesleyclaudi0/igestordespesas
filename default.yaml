@@ -1,0 +1,4984 @@
+openapi: 3.0.0
+info:
+  title: "i Gestor App Despesas"
+  version: "20240301142832"
+servers:
+  - url: http://localhost:8080/iGestorAppDespesasJavaProd/rest
+paths:
+  /AlteraUsuario/gxobject:
+    post:
+      tags:
+        - AlteraUsuario
+      operationId: "UploadAlteraUsuario"
+      summary: "Upload a binary for an AlteraUsuario"
+      responses:
+        200:
+          description: "Successful operation"
+        400:
+          description: "Bad request"
+        500:
+          description: "Internal Server Error"
+
+  /AlteraUsuario:
+    post:
+      tags:
+        - AlteraUsuario
+      operationId: "AlteraUsuario"
+      summary: "Altera Usuario"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AlteraUsuarioInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /APIQRCode:
+    post:
+      tags:
+        - APIQRCode
+      operationId: "APIQRCode"
+      summary: "APIQRCode"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/APIQRCodeInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/APIQRCodeOutput"
+        404:
+          description: "Not found"
+  /BuscaParametrosDesenv:
+    post:
+      tags:
+        - BuscaParametrosDesenv
+      operationId: "BuscaParametrosDesenv"
+      summary: "Busca Parametros Desenv"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BuscaParametrosDesenvInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BuscaParametrosDesenvOutput"
+        404:
+          description: "Not found"
+  /BuscaSessaoDespesa:
+    post:
+      tags:
+        - BuscaSessaoDespesa
+      operationId: "BuscaSessaoDespesa"
+      summary: "Busca Sessao Despesa"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BuscaSessaoDespesaInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BuscaSessaoDespesaOutput"
+        404:
+          description: "Not found"
+  /BuscaSessaoSD:
+    post:
+      tags:
+        - BuscaSessaoSD
+      operationId: "BuscaSessaoSD"
+      summary: "Busca Sessao SD"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BuscaSessaoSDInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BuscaSessaoSDOutput"
+        404:
+          description: "Not found"
+  /DirectionsServiceRequest:
+    post:
+      tags:
+        - DirectionsServiceRequest
+      operationId: "DirectionsServiceRequest"
+      summary: "Directions Service Request"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DirectionsServiceRequestInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DirectionsServiceRequestOutput"
+        404:
+          description: "Not found"
+  /GAMSDChangePasswordUser:
+    post:
+      tags:
+        - GAMSDChangePasswordUser
+      operationId: "GAMSDChangePasswordUser"
+      summary: "GAMSDChange Password User"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GAMSDChangePasswordUserInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GAMSDChangePasswordUserOutput"
+        404:
+          description: "Not found"
+  /GAMSDRegisterUser:
+    post:
+      tags:
+        - GAMSDRegisterUser
+      operationId: "GAMSDRegisterUser"
+      summary: "Register New User"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GAMSDRegisterUserInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GAMSDRegisterUserOutput"
+        404:
+          description: "Not found"
+  /GAMSDUpdateRegisterUser:
+    post:
+      tags:
+        - GAMSDUpdateRegisterUser
+      operationId: "GAMSDUpdateRegisterUser"
+      summary: "Update Register User"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GAMSDUpdateRegisterUserInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GAMSDUpdateRegisterUserOutput"
+        404:
+          description: "Not found"
+  /GxAfterEventReplicator:
+    post:
+      tags:
+        - GxAfterEventReplicator
+      operationId: "GxAfterEventReplicator"
+      summary: "Gx After Event Replicator"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GxAfterEventReplicatorInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /GxBeforeEventReplicator:
+    post:
+      tags:
+        - GxBeforeEventReplicator
+      operationId: "GxBeforeEventReplicator"
+      summary: "Gx Before Event Replicator"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GxBeforeEventReplicatorInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GxBeforeEventReplicatorOutput"
+        404:
+          description: "Not found"
+  /GxOnPendingEventFailed:
+    post:
+      tags:
+        - GxOnPendingEventFailed
+      operationId: "GxOnPendingEventFailed"
+      summary: "Gx On Pending Event Failed"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GxOnPendingEventFailedInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GxOnPendingEventFailedOutput"
+        404:
+          description: "Not found"
+  /InsereMsg:
+    post:
+      tags:
+        - InsereMsg
+      operationId: "InsereMsg"
+      summary: "Insere Msg"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InsereMsgInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /NotificationsRegistrationHandler:
+    post:
+      tags:
+        - NotificationsRegistrationHandler
+      operationId: "NotificationsRegistrationHandler"
+      summary: "Notifications Registration Handler"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NotificationsRegistrationHandlerInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /PrcAtualizaStatusAprovacaoDespesa:
+    post:
+      tags:
+        - PrcAtualizaStatusAprovacaoDespesa
+      operationId: "PrcAtualizaStatusAprovacaoDespesa"
+      summary: "Prc Atualiza Status Aprovacao Despesa"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcAtualizaStatusAprovacaoDespesaInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrcAtualizaStatusAprovacaoDespesaOutput"
+        404:
+          description: "Not found"
+  /PrcDeleteDespesa:
+    post:
+      tags:
+        - PrcDeleteDespesa
+      operationId: "PrcDeleteDespesa"
+      summary: "Prc Delete Despesa"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcDeleteDespesaInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /PrcExisteChatDespesa:
+    post:
+      tags:
+        - PrcExisteChatDespesa
+      operationId: "PrcExisteChatDespesa"
+      summary: "Prc Existe Chat Despesa"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcExisteChatDespesaInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrcExisteChatDespesaOutput"
+        404:
+          description: "Not found"
+  /PrcInsereChat:
+    post:
+      tags:
+        - PrcInsereChat
+      operationId: "PrcInsereChat"
+      summary: "Prc Insere Chat"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcInsereChatInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /PrcInserirDespesa/gxobject:
+    post:
+      tags:
+        - PrcInserirDespesa
+      operationId: "UploadPrcInserirDespesa"
+      summary: "Upload a binary for a PrcInserirDespesa"
+      responses:
+        200:
+          description: "Successful operation"
+        400:
+          description: "Bad request"
+        500:
+          description: "Internal Server Error"
+
+  /PrcInserirDespesa:
+    post:
+      tags:
+        - PrcInserirDespesa
+      operationId: "PrcInserirDespesa"
+      summary: "Prc Inserir Despesa"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcInserirDespesaInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /PrcInserirDespesaMultipla/gxobject:
+    post:
+      tags:
+        - PrcInserirDespesaMultipla
+      operationId: "UploadPrcInserirDespesaMultipla"
+      summary: "Upload a binary for a PrcInserirDespesaMultipla"
+      responses:
+        200:
+          description: "Successful operation"
+        400:
+          description: "Bad request"
+        500:
+          description: "Internal Server Error"
+
+  /PrcInserirDespesaMultipla:
+    post:
+      tags:
+        - PrcInserirDespesaMultipla
+      operationId: "PrcInserirDespesaMultipla"
+      summary: "Prc Inserir Despesa Multipla"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcInserirDespesaMultiplaInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /PrcLogin:
+    post:
+      tags:
+        - PrcLogin
+      operationId: "PrcLogin"
+      summary: "Prc Login"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcLoginInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrcLoginOutput"
+        404:
+          description: "Not found"
+  /PrcLoginGAM:
+    post:
+      tags:
+        - PrcLoginGAM
+      operationId: "PrcLoginGAM"
+      summary: "Prc Login GAM"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcLoginGAMInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrcLoginGAMOutput"
+        404:
+          description: "Not found"
+  /PrcMarcaNotificacaoLida:
+    post:
+      tags:
+        - PrcMarcaNotificacaoLida
+      operationId: "PrcMarcaNotificacaoLida"
+      summary: "Prc Marca Notificacao Lida"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcMarcaNotificacaoLidaInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /PrConsultaQrCode:
+    post:
+      tags:
+        - PrConsultaQrCode
+      operationId: "PrConsultaQrCode"
+      summary: "Pr Consulta Qr Code"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrConsultaQrCodeInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrConsultaQrCodeOutput"
+        404:
+          description: "Not found"
+  /PrcPreencheColecaoDespesaMultipla:
+    post:
+      tags:
+        - PrcPreencheColecaoDespesaMultipla
+      operationId: "PrcPreencheColecaoDespesaMultipla"
+      summary: "Prc Preenche Colecao Despesa Multipla"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcPreencheColecaoDespesaMultiplaInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrcPreencheColecaoDespesaMultiplaOutput"
+        404:
+          description: "Not found"
+  /PrcRetornaAprovador:
+    post:
+      tags:
+        - PrcRetornaAprovador
+      operationId: "PrcRetornaAprovador"
+      summary: "Prc Retorna Aprovador"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcRetornaAprovadorInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrcRetornaAprovadorOutput"
+        404:
+          description: "Not found"
+  /PrcRetornaChatDespesa:
+    post:
+      tags:
+        - PrcRetornaChatDespesa
+      operationId: "PrcRetornaChatDespesa"
+      summary: "Prc Retorna Chat Despesa"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcRetornaChatDespesaInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrcRetornaChatDespesaOutput"
+        404:
+          description: "Not found"
+  /PrcRetornaGestor:
+    post:
+      tags:
+        - PrcRetornaGestor
+      operationId: "PrcRetornaGestor"
+      summary: "Prc Retorna Gestor"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcRetornaGestorInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrcRetornaGestorOutput"
+        404:
+          description: "Not found"
+  /PrcRetornaMoeda:
+    post:
+      tags:
+        - PrcRetornaMoeda
+      operationId: "PrcRetornaMoeda"
+      summary: "Prc Retorna Moeda"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcRetornaMoedaInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrcRetornaMoedaOutput"
+        404:
+          description: "Not found"
+  /PrcRetornaQtdDiariaPermitida:
+    post:
+      tags:
+        - PrcRetornaQtdDiariaPermitida
+      operationId: "PrcRetornaQtdDiariaPermitida"
+      summary: "Prc Retorna Qtd Diaria Permitida"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcRetornaQtdDiariaPermitidaInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrcRetornaQtdDiariaPermitidaOutput"
+        404:
+          description: "Not found"
+  /PrcRetornaRegraAprovacaoDespesa:
+    post:
+      tags:
+        - PrcRetornaRegraAprovacaoDespesa
+      operationId: "PrcRetornaRegraAprovacaoDespesa"
+      summary: "Prc Retorna Regra Aprovacao Despesa"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcRetornaRegraAprovacaoDespesaInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrcRetornaRegraAprovacaoDespesaOutput"
+        404:
+          description: "Not found"
+  /PrcRetornaRegraAprovacaoDespesa2:
+    post:
+      tags:
+        - PrcRetornaRegraAprovacaoDespesa2
+      operationId: "PrcRetornaRegraAprovacaoDespesa2"
+      summary: "Prc Retorna Regra Aprovacao Despesa2"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcRetornaRegraAprovacaoDespesa2Input"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrcRetornaRegraAprovacaoDespesa2Output"
+        404:
+          description: "Not found"
+  /PrcValorTipoDespesa:
+    post:
+      tags:
+        - PrcValorTipoDespesa
+      operationId: "PrcValorTipoDespesa"
+      summary: "Prc Valor Tipo Despesa"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcValorTipoDespesaInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrcValorTipoDespesaOutput"
+        404:
+          description: "Not found"
+  /PrcVerificaSeExisteQRCode:
+    post:
+      tags:
+        - PrcVerificaSeExisteQRCode
+      operationId: "PrcVerificaSeExisteQRCode"
+      summary: "Prc Verifica Se Existe QRCode"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrcVerificaSeExisteQRCodeInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrcVerificaSeExisteQRCodeOutput"
+        404:
+          description: "Not found"
+  /RegistraCheckIn:
+    post:
+      tags:
+        - RegistraCheckIn
+      operationId: "RegistraCheckIn"
+      summary: "Registra Check In"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegistraCheckInInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /RetornaAprovacaoDespesaGridHorizontal:
+    post:
+      tags:
+        - RetornaAprovacaoDespesaGridHorizontal
+      operationId: "RetornaAprovacaoDespesaGridHorizontal"
+      summary: "Retorna Aprovacao Despesa Grid Horizontal"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RetornaAprovacaoDespesaGridHorizontalInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RetornaAprovacaoDespesaGridHorizontalOutput"
+        404:
+          description: "Not found"
+  /RetornaArquivoTemp:
+    post:
+      tags:
+        - RetornaArquivoTemp
+      operationId: "RetornaArquivoTemp"
+      summary: "Retorna Arquivo Temp"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RetornaArquivoTempInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RetornaArquivoTempOutput"
+        404:
+          description: "Not found"
+  /RetornaCheckIn:
+    post:
+      tags:
+        - RetornaCheckIn
+      operationId: "RetornaCheckIn"
+      summary: "Retorna Check In"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RetornaCheckInInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RetornaCheckInOutput"
+        404:
+          description: "Not found"
+  /RetornaNotificacao:
+    post:
+      tags:
+        - RetornaNotificacao
+      operationId: "RetornaNotificacao"
+      summary: "Retorna Notificacao"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RetornaNotificacaoInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RetornaNotificacaoOutput"
+        404:
+          description: "Not found"
+  /SalvaDespesaArquivoTemp/gxobject:
+    post:
+      tags:
+        - SalvaDespesaArquivoTemp
+      operationId: "UploadSalvaDespesaArquivoTemp"
+      summary: "Upload a binary for a SalvaDespesaArquivoTemp"
+      responses:
+        200:
+          description: "Successful operation"
+        400:
+          description: "Bad request"
+        500:
+          description: "Internal Server Error"
+
+  /SalvaDespesaArquivoTemp:
+    post:
+      tags:
+        - SalvaDespesaArquivoTemp
+      operationId: "SalvaDespesaArquivoTemp"
+      summary: "Salva Despesa Arquivo Temp"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SalvaDespesaArquivoTempInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SalvaDespesaArquivoTempOutput"
+        404:
+          description: "Not found"
+  /SDPGetDecimalFromHex:
+    post:
+      tags:
+        - SDPGetDecimalFromHex
+      operationId: "SDPGetDecimalFromHex"
+      summary: "SDPGet Decimal From Hex"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SDPGetDecimalFromHexInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SDPGetDecimalFromHexOutput"
+        404:
+          description: "Not found"
+  /SDPGetUnicodeFromHex:
+    post:
+      tags:
+        - SDPGetUnicodeFromHex
+      operationId: "SDPGetUnicodeFromHex"
+      summary: "SDPGet Unicode From Hex"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SDPGetUnicodeFromHexInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SDPGetUnicodeFromHexOutput"
+        404:
+          description: "Not found"
+  /AppDespesas_Level_Detail:
+    get:
+      tags:
+        - AppDespesas_Level_Detail
+      operationId: "AppDespesas_Level_Detail"
+      summary: "AppDespesas_Level_Detail"
+      parameters:
+        - name: "Sdtcontextolongvarchar"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AppDespesas_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /CheckInSD_Level_Detail:
+    get:
+      tags:
+        - CheckInSD_Level_Detail
+      operationId: "CheckInSD_Level_Detail"
+      summary: "CheckInSD_Level_Detail"
+      parameters:
+        - name: "Sdtcontextolongvarchar"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CheckInSD_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /DespesaGridPrincipal_Level_Detail:
+    get:
+      tags:
+        - DespesaGridPrincipal_Level_Detail
+      operationId: "DespesaGridPrincipal_Level_Detail"
+      summary: "DespesaGridPrincipal_Level_Detail"
+      parameters:
+        - name: "Auxtela"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+        - name: "Status"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+        - name: "De"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            format: "date"
+        - name: "Ate"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            format: "date"
+        - name: "Statusdespesa"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Filtrousuarioid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Retorno"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+        - name: "Sdtcontextolongvarchar"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DespesaGridPrincipal_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /GAMSDChangePassword_Level_Detail:
+    get:
+      tags:
+        - GAMSDChangePassword_Level_Detail
+      operationId: "GAMSDChangePassword_Level_Detail"
+      summary: "GAMSDChangePassword_Level_Detail"
+      parameters:
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GAMSDChangePassword_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /GAMSDNotAuthorized_Level_Detail:
+    get:
+      tags:
+        - GAMSDNotAuthorized_Level_Detail
+      operationId: "GAMSDNotAuthorized_Level_Detail"
+      summary: "GAMSDNotAuthorized_Level_Detail"
+      parameters:
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GAMSDNotAuthorized_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /GAMSDUpdateUser_Level_Detail:
+    get:
+      tags:
+        - GAMSDUpdateUser_Level_Detail
+      operationId: "GAMSDUpdateUser_Level_Detail"
+      summary: "GAMSDUpdateUser_Level_Detail"
+      parameters:
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GAMSDUpdateUser_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /LoginSD_Level_Detail:
+    get:
+      tags:
+        - LoginSD_Level_Detail
+      operationId: "LoginSD_Level_Detail"
+      summary: "LoginSD_Level_Detail"
+      parameters:
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LoginSD_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /SDChatDespesa_Level_Detail:
+    get:
+      tags:
+        - SDChatDespesa_Level_Detail
+      operationId: "SDChatDespesa_Level_Detail"
+      summary: "SDChatDespesa_Level_Detail"
+      parameters:
+        - name: "Id"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Tela"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+        - name: "Sdtcontextolongvarchar"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SDChatDespesa_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /SDDespesas_Level_Detail:
+    get:
+      tags:
+        - SDDespesas_Level_Detail
+      operationId: "SDDespesas_Level_Detail"
+      summary: "SDDespesas_Level_Detail"
+      parameters:
+        - name: "Statusdespesa"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Sdtcontextolongvarchar"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SDDespesas_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /SDInsereDespesa_Level_Detail:
+    get:
+      tags:
+        - SDInsereDespesa_Level_Detail
+      operationId: "SDInsereDespesa_Level_Detail"
+      summary: "SDInsereDespesa_Level_Detail"
+      parameters:
+        - name: "Id"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Tela"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+        - name: "Retorno"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+        - name: "Statusdespesa"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Sdtcontextolongvarchar"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SDInsereDespesa_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /SDInsereDespesaMultilplas_Level_Detail:
+    get:
+      tags:
+        - SDInsereDespesaMultilplas_Level_Detail
+      operationId: "SDInsereDespesaMultilplas_Level_Detail"
+      summary: "SDInsereDespesaMultilplas_Level_Detail"
+      parameters:
+        - name: "Id"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Tela"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+        - name: "Retorno"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+        - name: "Statusdespesa"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Sdtcontextolongvarchar"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SDInsereDespesaMultilplas_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /SDInsereMultipla_Level_Detail/gxobject:
+    post:
+      tags:
+        - SDInsereMultipla_Level_Detail
+      operationId: "UploadSDInsereMultipla_Level_Detail"
+      summary: "Upload a binary for a SDInsereMultipla_Level_Detail"
+      responses:
+        200:
+          description: "Successful operation"
+        400:
+          description: "Bad request"
+        500:
+          description: "Internal Server Error"
+
+  /SDInsereMultipla_Level_Detail:
+    get:
+      tags:
+        - SDInsereMultipla_Level_Detail
+      operationId: "SDInsereMultipla_Level_Detail"
+      summary: "SDInsereMultipla_Level_Detail"
+      parameters:
+        - name: "Trnmode"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Despesaunidadeid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Projetoid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Auxtipodespesaid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Auxcentrocustoid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Auxdespesavalor"
+          in: "query"
+          required: false
+          schema:
+            type: "number"
+            format: "double"
+        - name: "Auxformapagamentoid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Auxdespesadescricao"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Auxdespesadatahora"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            format: "date-time"
+        - name: "Auxdespesareembolsocliente"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+        - name: "Auxusuariofoto"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Sdtcontextolongvarchar"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SDInsereMultipla_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /SDNotificacao_Level_Detail:
+    get:
+      tags:
+        - SDNotificacao_Level_Detail
+      operationId: "SDNotificacao_Level_Detail"
+      summary: "SDNotificacao_Level_Detail"
+      parameters:
+        - name: "Sdtcontextolongvarchar"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SDNotificacao_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /SDPerfil_Level_Detail:
+    get:
+      tags:
+        - SDPerfil_Level_Detail
+      operationId: "SDPerfil_Level_Detail"
+      summary: "SDPerfil_Level_Detail"
+      parameters:
+        - name: "Sdtcontextolongvarchar"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SDPerfil_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /SDRastreabilidade_Level_Detail:
+    get:
+      tags:
+        - SDRastreabilidade_Level_Detail
+      operationId: "SDRastreabilidade_Level_Detail"
+      summary: "SDRastreabilidade_Level_Detail"
+      parameters:
+        - name: "Despesaid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SDRastreabilidade_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /SDSelecaoCentroCusto_Level_Detail_Grid1:
+    get:
+      tags:
+        - SDSelecaoCentroCusto_Level_Detail_Grid1
+      operationId: "SDSelecaoCentroCusto_Level_Detail_Grid1"
+      summary: "SDSelecaoCentroCusto_Level_Detail_Grid1"
+      parameters:
+        - name: "Key"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Id"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Nome"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Searchtext"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Start"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Count"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SDSelecaoCentroCusto_Level_Detail_Grid1Sdt_Item"  
+
+        404:
+          description: "Not found"
+  /SDSelecaoCliente_Level_Detail_Grid1:
+    get:
+      tags:
+        - SDSelecaoCliente_Level_Detail_Grid1
+      operationId: "SDSelecaoCliente_Level_Detail_Grid1"
+      summary: "SDSelecaoCliente_Level_Detail_Grid1"
+      parameters:
+        - name: "Key"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Id"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Nome"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Searchtext"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Start"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Count"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SDSelecaoCliente_Level_Detail_Grid1Sdt_Item"  
+
+        404:
+          description: "Not found"
+  /SDSelecaoContratoDespesa_Level_Detail_Grid1:
+    get:
+      tags:
+        - SDSelecaoContratoDespesa_Level_Detail_Grid1
+      operationId: "SDSelecaoContratoDespesa_Level_Detail_Grid1"
+      summary: "SDSelecaoContratoDespesa_Level_Detail_Grid1"
+      parameters:
+        - name: "Key"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Clienteid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Id"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Nome"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Searchtext"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Start"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Count"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SDSelecaoContratoDespesa_Level_Detail_Grid1Sdt_Item"  
+
+        404:
+          description: "Not found"
+  /SDSelecaoFilial_Level_Detail_Grid1:
+    get:
+      tags:
+        - SDSelecaoFilial_Level_Detail_Grid1
+      operationId: "SDSelecaoFilial_Level_Detail_Grid1"
+      summary: "SDSelecaoFilial_Level_Detail_Grid1"
+      parameters:
+        - name: "Key"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Id"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Nome"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Searchtext"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Start"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Count"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SDSelecaoFilial_Level_Detail_Grid1Sdt_Item"  
+
+        404:
+          description: "Not found"
+  /SDSelecaoFormaPagto_Level_Detail_Grid1:
+    get:
+      tags:
+        - SDSelecaoFormaPagto_Level_Detail_Grid1
+      operationId: "SDSelecaoFormaPagto_Level_Detail_Grid1"
+      summary: "SDSelecaoFormaPagto_Level_Detail_Grid1"
+      parameters:
+        - name: "Key"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Id"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Nome"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Searchtext"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Start"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Count"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SDSelecaoFormaPagto_Level_Detail_Grid1Sdt_Item"  
+
+        404:
+          description: "Not found"
+  /SDSelecaoMoeda_Level_Detail_Grid1:
+    get:
+      tags:
+        - SDSelecaoMoeda_Level_Detail_Grid1
+      operationId: "SDSelecaoMoeda_Level_Detail_Grid1"
+      summary: "SDSelecaoMoeda_Level_Detail_Grid1"
+      parameters:
+        - name: "Key"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Id"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Nome"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Searchtext"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Start"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Count"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SDSelecaoMoeda_Level_Detail_Grid1Sdt_Item"  
+
+        404:
+          description: "Not found"
+  /SDSelecaoProjeto_Level_Detail_Grid1:
+    get:
+      tags:
+        - SDSelecaoProjeto_Level_Detail_Grid1
+      operationId: "SDSelecaoProjeto_Level_Detail_Grid1"
+      summary: "SDSelecaoProjeto_Level_Detail_Grid1"
+      parameters:
+        - name: "Key"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Id"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Nome"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Searchtext"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Start"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Count"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SDSelecaoProjeto_Level_Detail_Grid1Sdt_Item"  
+
+        404:
+          description: "Not found"
+  /SDSelecaoTipoDespesa_Level_Detail_Grid1:
+    get:
+      tags:
+        - SDSelecaoTipoDespesa_Level_Detail_Grid1
+      operationId: "SDSelecaoTipoDespesa_Level_Detail_Grid1"
+      summary: "SDSelecaoTipoDespesa_Level_Detail_Grid1"
+      parameters:
+        - name: "Key"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Id"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Nome"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Searchtext"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Start"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Count"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SDSelecaoTipoDespesa_Level_Detail_Grid1Sdt_Item"  
+
+        404:
+          description: "Not found"
+  /SDSelecaoUsuario_Level_Detail_Grid1:
+    get:
+      tags:
+        - SDSelecaoUsuario_Level_Detail_Grid1
+      operationId: "SDSelecaoUsuario_Level_Detail_Grid1"
+      summary: "SDSelecaoUsuario_Level_Detail_Grid1"
+      parameters:
+        - name: "Key"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Id"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Nome"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Searchtext"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Start"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Count"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SDSelecaoUsuario_Level_Detail_Grid1Sdt_Item"  
+
+        404:
+          description: "Not found"
+  /TelaBemVindo_Level_Detail:
+    get:
+      tags:
+        - TelaBemVindo_Level_Detail
+      operationId: "TelaBemVindo_Level_Detail"
+      summary: "TelaBemVindo_Level_Detail"
+      parameters:
+        - name: "Gxid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TelaBemVindo_Level_DetailSdt"  
+
+        404:
+          description: "Not found"
+  /oauth/access_token:
+    post:
+      tags:
+        - oauth
+      operationId: "oauth.access_token"
+      summary: "GeneXus GAM Services"
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /oauth/logout:
+    post:
+      tags:
+        - oauth
+      operationId: "oauth.logout"
+      summary: "GeneXus GAM Services"
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /oauth/userinfo:
+    get:
+      tags:
+        - oauth
+      operationId: "oauth.userinfo"
+      summary: "GeneXus GAM Services"
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /gx_valid_service:
+    post:
+      tags:
+        - GXValidService
+      operationId: "gx_valid_service"
+      summary: "GeneXus GAM Services"
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /oauth/gam/signin:
+    post:
+      tags:
+        - oauth.gam
+      operationId: "oauth.gam.signin"
+      summary: "GeneXus GAM Services"
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /oauth/gam/callback:
+    get:
+      tags:
+        - oauth.gam
+      operationId: "oauth.gam.callback"
+      summary: "GeneXus GAM Services"
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /oauth/gam/access_token:
+    post:
+      tags:
+        - oauth.gam
+      operationId: "oauth.gam.access_token"
+      summary: "GeneXus GAM Services"
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /oauth/gam/userinfo:
+    post:
+      tags:
+        - oauth.gam
+      operationId: "oauth.gam.userinfo"
+      summary: "GeneXus GAM Services"
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /oauth/gam/signout:
+    post:
+      tags:
+        - oauth.gam
+      operationId: "oauth.gam.signout"
+      summary: "GeneXus GAM Services"
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /oauth/RequestTokenService:
+    post:
+      tags:
+        - oauth
+      operationId: "oauth.RequestTokenService"
+      summary: "GeneXus GAM Services"
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /oauth/QueryAccessToken:
+    post:
+      tags:
+        - oauth
+      operationId: "oauth.QueryAccessToken"
+      summary: "GeneXus GAM Services"
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /saml/gam/signout:
+    post:
+      tags:
+        - saml.gam
+      operationId: "saml.gam.signout"
+      summary: "GeneXus GAM Services"
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /saml/gam/signin:
+    post:
+      tags:
+        - saml.gam
+      operationId: "saml.gam.signin"
+      summary: "GeneXus GAM Services"
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /gxmulticall:
+    post:
+      tags:
+        - GeneXusSDMulticall
+      operationId: "gxmulticall"
+      summary: "GeneXus Multicall Service for Smart Devices Application"
+
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /sdsvc_SDInsereDespesa_Level_Detail/Contratodespesanome:
+    get:
+      tags:
+        - sdsvc_SDInsereDespesa_Level_Detail  
+      operationId: "sdsvc_SDInsereDespesa_Level_Detail.Contratodespesanome"
+      summary: "Contratodespesanome"
+      parameters:
+        - name: "Key"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: "string"
+
+
+        404:
+          description: "Not found"
+
+  /sdsvc_SDInsereDespesaMultilplas_Level_Detail/Ctltipodespesaid:
+    get:
+      tags:
+        - sdsvc_SDInsereDespesaMultilplas_Level_Detail  
+      operationId: "sdsvc_SDInsereDespesaMultilplas_Level_Detail.Ctltipodespesaid"
+      summary: "Ctltipodespesaid"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: "string"
+
+
+        404:
+          description: "Not found"
+
+  /sdsvc_SDInsereDespesaMultilplas_Level_Detail/Ctlcentrocustoid:
+    get:
+      tags:
+        - sdsvc_SDInsereDespesaMultilplas_Level_Detail  
+      operationId: "sdsvc_SDInsereDespesaMultilplas_Level_Detail.Ctlcentrocustoid"
+      summary: "Ctlcentrocustoid"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: "string"
+
+
+        404:
+          description: "Not found"
+
+  /SDInsereMultipla_Level_Detail/gxobject:
+    post:
+      tags:
+        - SDInsereMultipla_Level_Detail
+      operationId: "UploadSDInsereMultipla_Level_Detail"
+      summary: "Upload a binary for a SDInsereMultipla_Level_Detail"
+      responses:
+        200:
+          description: "Successful operation"
+        400:
+          description: "Bad request"
+        500:
+          description: "Internal Server Error"
+
+
+  /sdsvc_SDPerfil_Level_Detail/Centrocustoid:
+    get:
+      tags:
+        - sdsvc_SDPerfil_Level_Detail  
+      operationId: "sdsvc_SDPerfil_Level_Detail.Centrocustoid"
+      summary: "Centrocustoid"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: "string"
+
+
+        404:
+          description: "Not found"
+
+  /sdsvc_SDPerfil_Level_Detail/Filialid:
+    get:
+      tags:
+        - sdsvc_SDPerfil_Level_Detail  
+      operationId: "sdsvc_SDPerfil_Level_Detail.Filialid"
+      summary: "Filialid"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: "string"
+
+
+        404:
+          description: "Not found"
+
+
+components:
+  securitySchemes:
+    oAuthGXGAM:
+      type: oauth2
+      description: GAM OAuth 2
+      flows:
+        password:          
+          tokenUrl: http://localhost:8080/iGestorAppDespesasJavaProd/oauth/gam/v2.0/access_token
+          scopes: 
+            fullcontrol: Full access
+
+  schemas:
+    APIQRCodeOutput:
+      properties:
+        prConsultaQrCodeOutput:
+          description: "pr Consulta Qr Code Output"
+          $ref: "#/components/schemas/prConsultaQrCodeOutput"
+        DespesaNFCodigo:
+          type: "string"
+        DespesaNFXML:
+          type: "string"
+        Total:
+          type: "number"
+          format: "double"
+        DtHora:
+          type: "string"
+          format: "date-time"
+        IsSucess:
+          type: "boolean"
+    BuscaParametrosDesenvOutput:
+      properties:
+        ParametrosValor:
+          type: "string"
+    BuscaSessaoDespesaOutput:
+      properties:
+        SDTDespesa:
+          description: "SDTDespesa"
+          $ref: "#/components/schemas/SDTDespesa"
+    BuscaSessaoSDOutput:
+      properties:
+        SDTContexto:
+          description: "SDTContexto"
+          $ref: "#/components/schemas/SDTContexto"
+    DirectionsServiceRequestOutput:
+      properties:
+        Routes:
+          description: "Route"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Route"
+        errorMessages:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+    GAMSDChangePasswordUserOutput:
+      properties:
+        Messages:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+    GAMSDRegisterUserOutput:
+      properties:
+        Messages:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+    GAMSDUpdateRegisterUserOutput:
+      properties:
+        Messages:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+    GxBeforeEventReplicatorOutput:
+      properties:
+        GxPendingEvents:
+          description: "Synchronization Event List"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventList_SynchronizationEventListItem"
+        EventResults:
+          description: "Synchronization Event Result List"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventResultList_SynchronizationEventResultListItem"
+    GxOnPendingEventFailedOutput:
+      properties:
+        Continue:
+          type: "boolean"
+    PrcAtualizaStatusAprovacaoDespesaOutput:
+      properties:
+        Messages:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+    PrcExisteChatDespesaOutput:
+      properties:
+        IsExiste:
+          type: "boolean"
+    PrcLoginOutput:
+      properties:
+        IsOk:
+          type: "boolean"
+        UsuarioId:
+          type: "integer"
+          format: "int64"
+        Key:
+          type: "string"
+        Mensagem:
+          type: "string"
+        SDTContextoLongVarChar:
+          type: "string"
+    PrcLoginGAMOutput:
+      properties:
+        IsOk:
+          type: "boolean"
+        UsuarioId:
+          type: "integer"
+          format: "int64"
+        Key:
+          type: "string"
+        Mensagem:
+          type: "string"
+        SDTContextoLongVarChar:
+          type: "string"
+    PrConsultaQrCodeOutput:
+      properties:
+        prConsultaQrCodeOutputOUT:
+          description: "pr Consulta Qr Code Output"
+          $ref: "#/components/schemas/prConsultaQrCodeOutput"
+        HttpMessage:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+        IsSuccess:
+          type: "boolean"
+    PrcPreencheColecaoDespesaMultiplaOutput:
+      properties:
+        DespesaIdCollection:
+          type: "integer"
+          format: "int64"
+    PrcRetornaAprovadorOutput:
+      properties:
+        IsAprovador:
+          type: "boolean"
+    PrcRetornaChatDespesaOutput:
+      properties:
+        SDTChat:
+          description: "SDTChat"
+          type: array
+          items:
+            $ref: "#/components/schemas/SDTChat_Item"
+    PrcRetornaGestorOutput:
+      properties:
+        GestorId:
+          type: "integer"
+          format: "int64"
+    PrcRetornaMoedaOutput:
+      properties:
+        MoedaId:
+          type: "integer"
+          format: "int64"
+        MoedaSigla:
+          type: "string"
+    PrcRetornaQtdDiariaPermitidaOutput:
+      properties:
+        IsErro:
+          type: "boolean"
+    PrcRetornaRegraAprovacaoDespesaOutput:
+      properties:
+        RegraAprovacaoDespesaId:
+          type: "integer"
+          format: "int64"
+    PrcRetornaRegraAprovacaoDespesa2Output:
+      properties:
+        RegraAprovacaoDespesaId:
+          type: "integer"
+          format: "int64"
+        ValoresId2:
+          type: "integer"
+          format: "int64"
+    PrcValorTipoDespesaOutput:
+      properties:
+        IsOk:
+          type: "boolean"
+        TipoDespesaValor:
+          type: "number"
+          format: "double"
+    PrcVerificaSeExisteQRCodeOutput:
+      properties:
+        IsExiste:
+          type: "boolean"
+    RetornaAprovacaoDespesaGridHorizontalOutput:
+      properties:
+        Aprovacoes:
+          description: "Aprovacao Despesa Grid Horizontal"
+          type: array
+          items:
+            $ref: "#/components/schemas/AprovacaoDespesaGridHorizontal"
+    RetornaArquivoTempOutput:
+      properties:
+        URL:
+          type: "string"
+    RetornaCheckInOutput:
+      properties:
+        SDTCheckInCollection:
+          description: "SDTCheck In"
+          type: array
+          items:
+            $ref: "#/components/schemas/SDTCheckIn"
+    RetornaNotificacaoOutput:
+      properties:
+        Aprovacoes:
+          description: "Aprovacao Despesa Grid"
+          type: array
+          items:
+            $ref: "#/components/schemas/AprovacaoDespesaGrid"
+    SalvaDespesaArquivoTempOutput:
+      properties:
+        Id:
+          type: "integer"
+          format: "int64"
+    SDPGetDecimalFromHexOutput:
+      properties:
+        DecimalValue:
+          type: "integer"
+          format: "int64"
+    SDPGetUnicodeFromHexOutput:
+      properties:
+        UnicodeCharacter:
+          type: "string"
+
+    AlteraUsuarioInput:
+      properties:
+        UsuarioId:
+          type: "integer"
+          format: "int64"
+        UsuarioNome:
+          type: "string"
+        UsuarioEmail:
+          type: "string"
+        UsuarioLogin:
+          type: "string"
+        UsuarioTelefone:
+          type: "string"
+        UsuarioCelular:
+          type: "string"
+        UsuarioSenha:
+          type: "string"
+        CentroCustoId:
+          type: "integer"
+          format: "int64"
+        FilialId:
+          type: "integer"
+          format: "int64"
+        UsuarioFoto:
+          type: "string"
+    APIQRCodeInput:
+      properties:
+        prConsultaQrCodeInput:
+          description: "pr Consulta Qr Code Input"
+          $ref: "#/components/schemas/prConsultaQrCodeInput"
+    BuscaParametrosDesenvInput:
+      properties:
+        ParametrosNome:
+          type: "string"
+        DefaultParametrosValor:
+          type: "string"
+    BuscaSessaoDespesaInput:
+      properties:
+        SDTDespesaLongVarChar:
+          type: "string"
+    BuscaSessaoSDInput:
+      properties:
+        SDTContextoLongVarChar:
+          type: "string"
+    DirectionsServiceRequestInput:
+      properties:
+        DirectionsServiceProvider:
+          type: "string"
+        DirectionsRequestParameters:
+          description: "Directions Request Parameters"
+          $ref: "#/components/schemas/GeneXus.Common.DirectionsRequestParameters"
+    GAMSDChangePasswordUserInput:
+      properties:
+        isPasswordExpires:
+          type: "boolean"
+        UserName:
+          type: "string"
+        UserPassword:
+          type: "string"
+        UserPasswordNew:
+          type: "string"
+        UserPasswordNewConf:
+          type: "string"
+    GAMSDRegisterUserInput:
+      properties:
+        UserName:
+          type: "string"
+        Email:
+          type: "string"
+        FirstName:
+          type: "string"
+        LastName:
+          type: "string"
+        Password:
+          type: "string"
+        ConfirmPassword:
+          type: "string"
+    GAMSDUpdateRegisterUserInput:
+      properties:
+        UserGUID:
+          type: "string"
+        UserName:
+          type: "string"
+        Email:
+          type: "string"
+        FirstName:
+          type: "string"
+        LastName:
+          type: "string"
+    GxAfterEventReplicatorInput:
+      properties:
+        EventResults:
+          description: "Synchronization Event Result List"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventResultList_SynchronizationEventResultListItem"
+        GxSynchroInfo:
+          description: "Synchronization Info"
+          $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationInfo"
+    GxBeforeEventReplicatorInput:
+      properties:
+        GxPendingEvents:
+          description: "Synchronization Event List"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventList_SynchronizationEventListItem"
+        GxSyncroInfo:
+          description: "Synchronization Info"
+          $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationInfo"
+        EventResults:
+          description: "Synchronization Event Result List"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventResultList_SynchronizationEventResultListItem"
+    GxOnPendingEventFailedInput:
+      properties:
+        PendingEvent:
+          description: "Synchronization Event List"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventList_SynchronizationEventListItem"
+        BCName:
+          type: "string"
+        BCJson:
+          type: "string"
+        EventResult:
+          description: "Synchronization Event Result List"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventResultList_SynchronizationEventResultListItem"
+        GxSyncroInfo:
+          description: "Synchronization Info"
+          $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationInfo"
+    InsereMsgInput:
+      properties:
+        MensagemDescricao:
+          type: "string"
+    NotificationsRegistrationHandlerInput:
+      properties:
+        DeviceType:
+          type: "integer"
+          format: "int32"
+        DeviceId:
+          type: "string"
+        DeviceToken:
+          type: "string"
+        DeviceName:
+          type: "string"
+    PrcAtualizaStatusAprovacaoDespesaInput:
+      properties:
+        DespesaId:
+          type: "integer"
+          format: "int64"
+        DespesaGestorId:
+          type: "integer"
+          format: "int64"
+        AprovacaoDespesaStatus:
+          type: "integer"
+          format: "int64"
+        Descricao:
+          type: "string"
+    PrcDeleteDespesaInput:
+      properties:
+        DespesaId:
+          type: "integer"
+          format: "int64"
+    PrcExisteChatDespesaInput:
+      properties:
+        DespesaId:
+          type: "integer"
+          format: "int64"
+    PrcInsereChatInput:
+      properties:
+        DespesaId:
+          type: "integer"
+          format: "int64"
+        UsuarioId:
+          type: "integer"
+          format: "int64"
+        Texto:
+          type: "string"
+        Key:
+          type: "string"
+    PrcInserirDespesaInput:
+      properties:
+        TrnMode:
+          type: "string"
+        Id:
+          type: "integer"
+          format: "int64"
+        Key:
+          type: "string"
+        UsuarioId:
+          type: "integer"
+          format: "int64"
+        DespesaGestorId:
+          type: "integer"
+          format: "int64"
+        CentroCustoId:
+          type: "integer"
+          format: "int64"
+        ClienteId:
+          type: "integer"
+          format: "int64"
+        ContratoDespesaId:
+          type: "integer"
+          format: "int64"
+        DespesaDataHora:
+          type: "string"
+          format: "date-time"
+        DespesaDescricao:
+          type: "string"
+        DespesaMoedaId:
+          type: "integer"
+          format: "int64"
+        DespesaUnidadeId:
+          type: "integer"
+          format: "int64"
+        ProjetoId:
+          type: "integer"
+          format: "int64"
+        DespesaValor:
+          type: "number"
+          format: "double"
+        FormaPagamentoId:
+          type: "integer"
+          format: "int64"
+        TipoDespesaId:
+          type: "integer"
+          format: "int64"
+        DespesaUsuarioId:
+          type: "integer"
+          format: "int64"
+        KMInfo:
+          type: "number"
+          format: "double"
+        KMCalculado:
+          type: "number"
+          format: "double"
+        DespesaOrigemAddress:
+          type: "string"
+        DespesaOrigemGeoLocation:
+          type: "string"
+        DespesaDestinoAddress:
+          type: "string"
+        DespesaDestinoGeoLocation:
+          type: "string"
+        DespesaReembolsoCliente:
+          type: "integer"
+          format: "int32"
+        Status:
+          type: "integer"
+          format: "int32"
+        AuxRegraAprovacaoDespesaId:
+          type: "integer"
+          format: "int64"
+        DespesaFoto:
+          type: "string"
+        SDTEtiquetaCollection:
+          description: "SDTEtiqueta"
+          type: array
+          items:
+            $ref: "#/components/schemas/SDTEtiqueta"
+        URL:
+          type: "string"
+        DespesaNFCodigo:
+          type: "string"
+        DespesaNFXML:
+          type: "string"
+        DespesaNFUrl:
+          type: "string"
+    PrcInserirDespesaMultiplaInput:
+      properties:
+        TrnMode:
+          type: "string"
+        Id:
+          type: "integer"
+          format: "int64"
+        Key:
+          type: "string"
+        UsuarioId:
+          type: "integer"
+          format: "int64"
+        DespesaGestorId:
+          type: "integer"
+          format: "int64"
+        CentroCustoId:
+          type: "integer"
+          format: "int64"
+        ClienteId:
+          type: "integer"
+          format: "int64"
+        ContratoDespesaId:
+          type: "integer"
+          format: "int64"
+        DespesaDataHora:
+          type: "string"
+          format: "date-time"
+        DespesaDescricao:
+          type: "string"
+        DespesaMoedaId:
+          type: "integer"
+          format: "int64"
+        DespesaUnidadeId:
+          type: "integer"
+          format: "int64"
+        ProjetoId:
+          type: "integer"
+          format: "int64"
+        DespesaValor:
+          type: "number"
+          format: "double"
+        FormaPagamentoId:
+          type: "integer"
+          format: "int64"
+        TipoDespesaId:
+          type: "integer"
+          format: "int64"
+        DespesaUsuarioId:
+          type: "integer"
+          format: "int64"
+        KMInfo:
+          type: "number"
+          format: "double"
+        KMCalculado:
+          type: "number"
+          format: "double"
+        DespesaOrigemAddress:
+          type: "string"
+        DespesaOrigemGeoLocation:
+          type: "string"
+        DespesaDestinoAddress:
+          type: "string"
+        DespesaDestinoGeoLocation:
+          type: "string"
+        DespesaReembolsoCliente:
+          type: "integer"
+          format: "int32"
+        Status:
+          type: "integer"
+          format: "int32"
+        AuxRegraAprovacaoDespesaId:
+          type: "integer"
+          format: "int64"
+        DespesaFoto:
+          type: "string"
+        SDTEtiquetaCollection:
+          description: "SDTEtiqueta"
+          type: array
+          items:
+            $ref: "#/components/schemas/SDTEtiqueta"
+        URL:
+          type: "string"
+        DespesaNFCodigo:
+          type: "string"
+        DespesaNFXML:
+          type: "string"
+        DespesaNFUrl:
+          type: "string"
+    PrcLoginInput:
+      properties:
+        UsuarioLogin:
+          type: "string"
+        UsuarioSenha:
+          type: "string"
+    PrcLoginGAMInput:
+      properties:
+        UsuarioEmail:
+          type: "string"
+    PrcMarcaNotificacaoLidaInput:
+      properties:
+        NotificacaoId:
+          type: "integer"
+          format: "int64"
+    PrConsultaQrCodeInput:
+      properties:
+        body:
+          description: "pr Consulta Qr Code Input"
+          $ref: "#/components/schemas/prConsultaQrCodeInput"
+    PrcPreencheColecaoDespesaMultiplaInput:
+      properties:
+        DespesaId:
+          type: "integer"
+          format: "int64"
+    PrcRetornaAprovadorInput:
+      properties:
+        UsuarioId:
+          type: "integer"
+          format: "int64"
+        Key:
+          type: "string"
+        DespesaId:
+          type: "integer"
+          format: "int64"
+    PrcRetornaChatDespesaInput:
+      properties:
+        DespesaId:
+          type: "integer"
+          format: "int64"
+        UsuarioId:
+          type: "integer"
+          format: "int64"
+    PrcRetornaGestorInput:
+      properties:
+        UsuarioId:
+          type: "integer"
+          format: "int64"
+    PrcRetornaMoedaInput:
+      properties:
+        UsuarioId:
+          type: "integer"
+          format: "int64"
+    PrcRetornaQtdDiariaPermitidaInput:
+      properties:
+        DespesaDataHora:
+          type: "string"
+          format: "date-time"
+        Key:
+          type: "string"
+    PrcRetornaRegraAprovacaoDespesaInput:
+      properties:
+        FilialId:
+          type: "integer"
+          format: "int64"
+        CentroCustoId:
+          type: "integer"
+          format: "int64"
+        ProjetoId:
+          type: "integer"
+          format: "int64"
+        DespesaValor:
+          type: "number"
+          format: "double"
+    PrcRetornaRegraAprovacaoDespesa2Input:
+      properties:
+        FilialId:
+          type: "integer"
+          format: "int64"
+        CentroCustoId:
+          type: "integer"
+          format: "int64"
+        ProjetoId:
+          type: "integer"
+          format: "int64"
+        DespesaValor:
+          type: "number"
+          format: "double"
+    PrcValorTipoDespesaInput:
+      properties:
+        TipoDespesaId:
+          type: "integer"
+          format: "int64"
+        AttTipoDespesaValor:
+          type: "number"
+          format: "double"
+        UsuarioId:
+          type: "integer"
+          format: "int64"
+    PrcVerificaSeExisteQRCodeInput:
+      properties:
+        DespesaNFURL:
+          type: "string"
+    RegistraCheckInInput:
+      properties:
+        UsuarioId:
+          type: "integer"
+          format: "int64"
+        CheckGeoLocation:
+          type: "string"
+        Endereco:
+          type: "string"
+        Key:
+          type: "string"
+    RetornaAprovacaoDespesaGridHorizontalInput:
+      properties:
+        Key:
+          type: "string"
+        UsuarioId:
+          type: "integer"
+          format: "int64"
+        FiltroUsuarioId:
+          type: "integer"
+          format: "int64"
+        IsAdmin:
+          type: "boolean"
+        StatusDespesa:
+          type: "integer"
+          format: "int64"
+    RetornaArquivoTempInput:
+      properties:
+        DespesaArquivoTempId:
+          type: "integer"
+          format: "int64"
+    RetornaCheckInInput:
+      properties:
+        UsuarioId:
+          type: "integer"
+          format: "int64"
+    RetornaNotificacaoInput:
+      properties:
+        UsuarioId:
+          type: "integer"
+          format: "int64"
+        Key:
+          type: "string"
+        NotificacaoLida:
+          type: "integer"
+          format: "int32"
+    SalvaDespesaArquivoTempInput:
+      properties:
+        BlobFile:
+          type: "string"
+    SDPGetDecimalFromHexInput:
+      properties:
+        HexadecimalValueIn:
+          type: "string"
+    SDPGetUnicodeFromHexInput:
+      properties:
+        HexaUnicode:
+          type: "string"
+
+  
+    AprovacaoDespesaGrid:
+      properties:
+        Foto:
+          description: "Foto"
+          type: "string"
+        Texto:
+          description: "Texto"
+          type: "string"
+        Subtexto:
+          description: "Subtexto"
+          type: "string"
+        Valor:
+          description: "Valor"
+          type: "string"
+        Data:
+          description: "Data"
+          type: "string"
+        IconeAprovar:
+          description: "Icone Aprovar"
+          type: "string"
+        TextoAprovar:
+          description: "Texto Aprovar"
+          type: "string"
+        IconeReprovar:
+          description: "Icone Reprovar"
+          type: "string"
+        TextoReprovar:
+          description: "Texto Reprovar"
+          type: "string"
+        Status:
+          description: "Status"
+          type: "integer"
+          format: "int32"
+        DespesaId:
+          description: "Despesa Id"
+          type: "integer"
+          format: "int64"
+        DespesaGestorId:
+          description: "Despesa Gestor Id"
+          type: "integer"
+          format: "int64"
+        Sequencial:
+          description: "Sequencial"
+          type: "integer"
+          format: "int64"
+        Date:
+          description: "Date"
+          type: "string"
+          format: "date"
+        DataFormatada:
+          description: "Data Formatada"
+          type: "string"
+        IconeDetalhe:
+          description: "Icone Detalhe"
+          type: "string"
+        TextoDetalhe:
+          description: "Texto Detalhe"
+          type: "string"
+        IconeRastreio:
+          description: "Icone Rastreio"
+          type: "string"
+        TextoRastreio:
+          description: "Texto Rastreio"
+          type: "string"
+        Lida:
+          description: "Lida"
+          type: "integer"
+          format: "int32"
+        IconeChat:
+          description: "Icone Chat"
+          type: "string"
+        TextoChat:
+          description: "Texto Chat"
+          type: "string"
+        IsSelect:
+          description: ""
+          type: "boolean"
+        IsMultipla:
+          description: "Is Multipla"
+          type: "boolean"
+
+
+
+    AprovacaoDespesaGridHorizontal:
+      properties:
+        Foto:
+          description: "Foto"
+          type: "string"
+        Nome:
+          description: "Nome"
+          type: "string"
+        Texto:
+          description: "Texto"
+          type: "string"
+        Id:
+          description: "Id"
+          type: "integer"
+          format: "int64"
+        Valor:
+          description: "Valor"
+          type: "number"
+          format: "double"
+
+
+
+    GeneXus.Common.DirectionsRequestParameters:
+      properties:
+        sourceLocation:
+          description: "Source Location"
+          type: "string"
+        destinationLocation:
+          description: "Destination Location"
+          type: "string"
+        waypoints:
+          description: "Intermediate waypoints"
+          type: array
+          items:
+            type: "string"
+        optimizeWaypoints:
+          description: "optimize Waypoints"
+          type: "boolean"
+        transportType:
+          description: "transport Type"
+          type: "string"
+        requestAlternateRoutes:
+          description: "request Alternate Routes"
+          type: "boolean"
+        additionalParameters:
+          description: "Configuration Property"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Notifications.ConfigurationProperty"
+
+
+
+    GeneXus.Common.Messages_Message:
+      properties:
+        Id:
+          description: "Id"
+          type: "string"
+        Type:
+          description: "Type"
+          type: "integer"
+          format: "int32"
+        Description:
+          description: "Description"
+          type: "string"
+
+
+
+    GeneXus.Common.Notifications.ConfigurationProperty:
+      properties:
+        PropertyName:
+          description: "Property Name"
+          type: "string"
+        PropertyValue:
+          description: "Property Value"
+          type: "string"
+
+
+
+    GeneXus.Common.Route:
+      properties:
+        name:
+          description: "The expected travel time in seconds"
+          type: "string"
+        advisoryNotices:
+          description: "A collection of advisory notice strings for the route"
+          type: array
+          items:
+            type: "string"
+        distance:
+          description: "The route distance in meters"
+          type: "number"
+          format: "double"
+        expectedTravelTime:
+          description: "The expected travel time in seconds"
+          type: "number"
+          format: "double"
+        transportType:
+          description: "The overall route transport type"
+          type: "string"
+        geoline:
+          description: "The route geometry"
+          type: "string"
+
+
+
+    GeneXus.SD.Synchronization.SynchronizationEventList_SynchronizationEventListItem:
+      properties:
+        EventId:
+          description: "Pending Event Id"
+          type: "string"
+          format: "uuid"
+        EventTimestamp:
+          description: "Pending Event Timestamp"
+          type: "string"
+          format: "date-time"
+        EventBC:
+          description: "Pending Event BC"
+          type: "string"
+        EventAction:
+          description: "Pending Event Action"
+          type: "integer"
+          format: "int32"
+        EventData:
+          description: "Pending Event Data"
+          type: "string"
+        EventStatus:
+          description: "Pending Event Status"
+          type: "integer"
+          format: "int32"
+        EventErrors:
+          description: "Pending Event Extras"
+          type: "string"
+
+
+
+    GeneXus.SD.Synchronization.SynchronizationEventResultList_SynchronizationEventResultListItem:
+      properties:
+        EventId:
+          description: "Pending Event Id"
+          type: "string"
+          format: "uuid"
+        EventTimestamp:
+          description: "Pending Event Timestamp"
+          type: "string"
+          format: "date-time"
+        EventStatus:
+          description: "Pending Event Status"
+          type: "integer"
+          format: "int32"
+        EventErrors:
+          description: "Pending Event Errors"
+          type: "string"
+
+        Mappings:
+          type: array
+          items:
+            description: MappingsItem
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventResultList.Mappings_MappingsItem"
+
+
+    GeneXus.SD.Synchronization.SynchronizationEventResultList.Mappings_MappingsItem:
+      properties:
+        Table:
+          description: "Table"
+          type: "string"
+        Updates:
+          description: "Updates"
+          type: "string"
+        Conditions:
+          description: "Conditions"
+          type: "string"
+
+
+      x-gx-level: "SynchronizationEventResultList"
+
+    GeneXus.SD.Synchronization.SynchronizationInfo:
+      properties:
+        GxAppVersion:
+          description: "Application Version"
+          type: "string"
+        Synchronizer:
+          description: "Synchronizer"
+          type: "string"
+
+
+
+    prConsultaQrCodeInput:
+      properties:
+        QrCode:
+          description: "Qr Code"
+          type: "string"
+        Estado:
+          description: "Estado"
+          type: "string"
+        UrlNotificacao:
+          description: "Url Notificacao"
+          type: "string"
+
+
+
+    prConsultaQrCodeOutput:
+      properties:
+        Saida:
+          description: "Saida"
+          type: "string"
+
+
+
+    SDTChat_Item:
+      properties:
+        DataHora1:
+          description: "Data Hora1"
+          type: "string"
+          format: "date-time"
+        DataHora2:
+          description: "Data Hora2"
+          type: "string"
+          format: "date-time"
+        Usu1:
+          description: "Usu1"
+          type: "string"
+        Usu2:
+          description: "Usu2"
+          type: "string"
+        Texto1:
+          description: "Texto1"
+          type: "string"
+        Texto2:
+          description: "Texto2"
+          type: "string"
+        Foto1:
+          description: "Foto1"
+          type: "string"
+        Foto2:
+          description: "Foto2"
+          type: "string"
+
+
+
+    SDTCheckIn:
+      properties:
+        Endereco:
+          description: "Endereco"
+          type: "string"
+        Usuario:
+          description: "Usuario"
+          type: "string"
+        Hora:
+          description: "Hora"
+          type: "string"
+        Imagem:
+          description: "Imagem"
+          type: "string"
+
+
+
+    SDTContexto:
+      properties:
+        UsuarioId:
+          description: "Usuario Id"
+          type: "integer"
+          format: "int64"
+        UsuarioNome:
+          description: "Nome"
+          type: "string"
+        UsuarioFoto:
+          description: "Usuario Foto"
+          type: "string"
+        IsAdmin:
+          description: "Is Admin"
+          type: "boolean"
+        IsExterno:
+          description: "Is Externo"
+          type: "boolean"
+        TipoLogin:
+          description: "Tipo Login"
+          type: "integer"
+          format: "int32"
+        Key:
+          description: "Key"
+          type: "string"
+        ModuloPerfilId:
+          description: "Modulo Perfil Id"
+          type: array
+          items:
+            type: "integer"
+            format: "int64"
+
+
+
+    SDTDespesa:
+      properties:
+        Id:
+          description: "Id"
+          type: "integer"
+          format: "int64"
+        ProjetoId:
+          description: "Projeto"
+          type: "integer"
+          format: "int64"
+        TipoDespesaId:
+          description: "Tipo de Despesa"
+          type: "integer"
+          format: "int64"
+        CentroCustoId:
+          description: "Centro de Custo"
+          type: "integer"
+          format: "int64"
+        FormaPagamentoId:
+          description: "Forma Pag."
+          type: "integer"
+          format: "int64"
+        DespesaDescricao:
+          description: "Descrição"
+          type: "string"
+        DespesaValor:
+          description: "Valor"
+          type: "number"
+          format: "double"
+        DespesaDataHora:
+          description: "Despesa Data Hora"
+          type: "string"
+          format: "date-time"
+        DespesaReembolsoCliente:
+          description: "Despesa Reembolso Cliente"
+          type: "integer"
+          format: "int32"
+        UsuarioFoto:
+          description: "Usuario Foto"
+          type: "string"
+        Url:
+          description: "Url"
+          type: "string"
+        UsuarioId:
+          description: "Usuario Id"
+          type: "integer"
+          format: "int64"
+        MoedaId:
+          description: "Moeda Id"
+          type: "integer"
+          format: "int64"
+        ClienteId:
+          description: "Cliente Id"
+          type: "integer"
+          format: "int64"
+        FilialId:
+          description: "Filial Id"
+          type: "integer"
+          format: "int64"
+        GestorId:
+          description: "Gestor Id"
+          type: "integer"
+          format: "int64"
+        RegraAprovacaoDespesaId:
+          description: "Regra Aprovacao Despesa Id"
+          type: "integer"
+          format: "int64"
+        IconeExcluir:
+          description: "Icone Excluir"
+          type: "string"
+        IconeAlterar:
+          description: "Icone Alterar"
+          type: "string"
+        DespesaNFXML:
+          description: "Despesa NFXML"
+          type: "string"
+        DespesaNFURL:
+          description: "Despesa NFURL"
+          type: "string"
+        DespesaNFCodigo:
+          description: "Despesa NFCodigo"
+          type: "string"
+
+
+
+    SDTEtiqueta:
+      properties:
+        Id:
+          description: "Id"
+          type: "integer"
+          format: "int64"
+        Nome:
+          description: "Nome"
+          type: "string"
+
+
+
+    AppDespesas_Level_DetailSdt:
+      properties:
+        Cartoespaypal:
+          description: "Cartao Paypal"
+          $ref: "#/components/schemas/CartaoPaypal"
+        Principalcima:
+          description: "Principal Cima"
+          $ref: "#/components/schemas/PrincipalCima"
+        Informacaousuario:
+          description: "Informacao Usuario"
+          $ref: "#/components/schemas/InformacaoUsuario"
+        Principalbaixogridlabel:
+          description: "Principal Baixo Grid Label"
+          $ref: "#/components/schemas/PrincipalBaixoGridLabel"
+        De:
+          description: "De"
+          type: "string"
+          format: "date"
+        Ate:
+          description: "Ate"
+          type: "string"
+          format: "date"
+        Statusdespesa:
+          description: "Statusdespesa"
+          type: "integer"
+          format: "int64"
+        Dashboardtabs:
+          description: "Dashboard Tabs"
+          $ref: "#/components/schemas/DashboardTabs"
+        Revisarbotao:
+          description: "Revisar Botao"
+          $ref: "#/components/schemas/RevisarBotao"
+        Date:
+          description: "Date"
+          type: "string"
+          format: "date"
+        Auxstatusdespesa:
+          description: "Auxstatusdespesa"
+          type: "integer"
+          format: "int64"
+        Gxdynprop:
+          description: "Gxdynprop"
+          type: "string"
+
+
+
+    CartaoPaypal:
+      properties:
+        Logo:
+          description: "Logo"
+          type: "string"
+        Titulo:
+          description: "Titulo"
+          type: "string"
+        Icone:
+          description: "Icone"
+          type: "string"
+        Chip:
+          description: "Chip"
+          type: "string"
+        Moeda:
+          description: "Moeda"
+          type: "string"
+        Valor:
+          description: "Valor"
+          type: "string"
+        Subvalor:
+          description: "Subvalor"
+          type: "string"
+        Titular:
+          description: "Titular"
+          type: "string"
+        Qtd:
+          description: "Qtd"
+          type: "integer"
+          format: "int64"
+        StatusDespesa:
+          description: "Status Despesa"
+          type: "integer"
+          format: "int64"
+
+
+
+    PrincipalCima:
+      properties:
+        IconeNotificacao:
+          description: "Icone Notificacao"
+          type: "string"
+        BolinhaContador:
+          description: "Bolinha Contador"
+          type: "string"
+        Valor:
+          description: "Valor"
+          type: "string"
+        Moeda:
+          description: "Moeda"
+          type: "string"
+        Descricao:
+          description: "Descricao"
+          type: "string"
+
+
+
+    InformacaoUsuario:
+      properties:
+        Foto:
+          description: "Foto"
+          type: "string"
+        Nome:
+          description: "Nome"
+          type: "string"
+
+
+
+    PrincipalBaixoGridLabel:
+      properties:
+        TextoUm:
+          description: "Texto Um"
+          type: "string"
+        TextoDois:
+          description: "Texto Dois"
+          type: "string"
+        TextoTres:
+          description: "Texto Tres"
+          type: "string"
+        Icone:
+          description: "Icone"
+          type: "string"
+
+
+
+    DashboardTabs:
+      properties:
+        IconeUm:
+          description: "Icone Um"
+          type: "string"
+        TextoUm:
+          description: "Texto Um"
+          type: "string"
+        TextoDois:
+          description: "Texto Dois"
+          type: "string"
+        IconeTres:
+          description: "Icone Tres"
+          type: "string"
+        TextoTres:
+          description: "Texto Tres"
+          type: "string"
+
+
+
+    RevisarBotao:
+      properties:
+        Texto:
+          description: "Texto"
+          type: "string"
+
+
+
+    CheckInSD_Level_DetailSdt:
+      properties:
+        Maplocations:
+          description: "Map Location Data"
+          $ref: "#/components/schemas/MapLocationData"
+        Sdtcheckincollection:
+          description: "SDTCheck In"
+          $ref: "#/components/schemas/SDTCheckIn"
+        Sdtcontexto:
+          description: "SDTContexto"
+          $ref: "#/components/schemas/SDTContexto"
+        Key:
+          description: "Key"
+          type: "string"
+
+
+
+    MapLocationData:
+      properties:
+        Id:
+          description: "Id"
+          type: "integer"
+          format: "int32"
+        Title:
+          description: "Title"
+          type: "string"
+        Description:
+          description: "Description"
+          type: "string"
+        Image:
+          description: "Image"
+          type: "string"
+        PinImage:
+          description: "Pin Image"
+          type: "string"
+        Location:
+          description: "Location"
+          type: "string"
+        InfoField1:
+          description: "Info Field1"
+          type: "string"
+        InfoField2:
+          description: "Info Field2"
+          type: "string"
+        InfoFieldNumeric1:
+          description: "Info Field Numeric1"
+          type: "number"
+          format: "double"
+        InfoFieldNumeric2:
+          description: "Info Field Numeric2"
+          type: "integer"
+          format: "int32"
+
+
+
+    DespesaGridPrincipal_Level_DetailSdt:
+      properties:
+        Gxprops_aprovacaodespesagrid:
+          description: "Gxprops_aprovacaodespesagrid"
+          type: "string"
+        Aprovacaodespesagrid:
+          description: "Aprovacao Despesa Grid"
+          $ref: "#/components/schemas/AprovacaoDespesaGrid"
+        Sdtcontexto:
+          description: "SDTContexto"
+          $ref: "#/components/schemas/SDTContexto"
+        Key:
+          description: "Key"
+          type: "string"
+        Retorno:
+          description: "Retorno"
+          type: "integer"
+          format: "int32"
+        Statusdespesa:
+          description: "Statusdespesa"
+          type: "integer"
+          format: "int64"
+
+
+
+    GAMSDChangePassword_Level_DetailSdt:
+      properties:
+        Username:
+          description: "Username"
+          type: "string"
+        Userpassword:
+          description: "Userpassword"
+          type: "string"
+        Userpasswordnew:
+          description: "Userpasswordnew"
+          type: "string"
+        Userpasswordnewconf:
+          description: "Userpasswordnewconf"
+          type: "string"
+        Ispasswordexpires:
+          description: "Ispasswordexpires"
+          type: "boolean"
+
+
+
+    GAMSDNotAuthorized_Level_DetailSdt:
+      properties:
+        User:
+          description: "User"
+          type: "string"
+        Password:
+          description: "Password"
+          type: "string"
+
+
+
+    GAMSDUpdateUser_Level_DetailSdt:
+      properties:
+        Username:
+          description: "Username"
+          type: "string"
+        Email:
+          description: "Email"
+          type: "string"
+        Firstname:
+          description: "Firstname"
+          type: "string"
+        Lastname:
+          description: "Lastname"
+          type: "string"
+        Userguid:
+          description: "Userguid"
+          type: "string"
+
+
+
+    LoginSD_Level_DetailSdt:
+      properties:
+        Cimaloginvenda:
+          description: "Cima Login Venda"
+          $ref: "#/components/schemas/CimaLoginVenda"
+        Informacoesloginvenda:
+          description: "Informacoes Login Venda"
+          $ref: "#/components/schemas/InformacoesLoginVenda"
+        Login:
+          description: "Login"
+          type: "string"
+        Senha:
+          description: "Senha"
+          type: "string"
+        Inferiorloginvenda:
+          description: "Inferior Login Venda"
+          $ref: "#/components/schemas/InferiorLoginVenda"
+
+
+
+    CimaLoginVenda:
+      properties:
+        Texto:
+          description: "Texto"
+          type: "string"
+        Subtexto:
+          description: "Subtexto"
+          type: "string"
+
+
+
+    InformacoesLoginVenda:
+      properties:
+        PrimeiroTitulo:
+          description: "Primeiro Titulo"
+          type: "string"
+        SegundoTitulo:
+          description: "Segundo Titulo"
+          type: "string"
+        IconeLogin:
+          description: "Icone Login"
+          type: "string"
+        Login:
+          description: "Login"
+          type: "string"
+        IconeSenha:
+          description: "Icone Senha"
+          type: "string"
+        Senha:
+          description: "Senha"
+          type: "string"
+        LembrarMe:
+          description: "Lembrar Me"
+          type: "boolean"
+        TextoLembrarMe:
+          description: "Texto Lembrar Me"
+          type: "string"
+        EsqueceuSenha:
+          description: "Esqueceu Senha"
+          type: "string"
+        IconeBotao:
+          description: "Icone Botao"
+          type: "string"
+
+
+
+    InferiorLoginVenda:
+      properties:
+        Texto:
+          description: "Texto"
+          type: "string"
+        MarcaUmIcone:
+          description: "Marca Um Icone"
+          type: "string"
+        MarcaUmTexto:
+          description: "Marca Um Texto"
+          type: "string"
+        MarcaDoisIcone:
+          description: "Marca Dois Icone"
+          type: "string"
+        MarcaDoisTexto:
+          description: "Marca Dois Texto"
+          type: "string"
+
+
+
+    SDChatDespesa_Level_DetailSdt:
+      properties:
+        Gxprops_sdtchat:
+          description: "Gxprops_sdtchat"
+          type: "string"
+        Sdtchat:
+          description: "SDTChat"
+          type: array
+          items:
+            $ref: "#/components/schemas/SDTChat_Item"
+        Aprovacaodespesasuperior:
+          description: "Aprovacao Despesa Superior"
+          $ref: "#/components/schemas/AprovacaoDespesaSuperior"
+        Texto:
+          description: "Texto"
+          type: "string"
+        Enviar:
+          description: "Enviar"
+          type: "string"
+        Enviar_GXI:
+          description: "Enviar_GXI"
+          type: "string"
+        Id:
+          description: "Id"
+          type: "integer"
+          format: "int64"
+        Usuarioid:
+          description: "Usuarioid"
+          type: "integer"
+          format: "int64"
+        Key:
+          description: "Key"
+          type: "string"
+        Tela:
+          description: "Tela"
+          type: "integer"
+          format: "int32"
+
+
+
+    AprovacaoDespesaSuperior:
+      properties:
+        Icone1:
+          description: "Icone1"
+          type: "string"
+        Texto:
+          description: "Texto"
+          type: "string"
+        Icone2:
+          description: "Icone2"
+          type: "string"
+        Filtro:
+          description: "Filtro"
+          type: "string"
+        FiltroIcone:
+          description: "Filtro Icone"
+          type: "string"
+        Foto:
+          description: "Foto"
+          type: "string"
+        Label:
+          description: "Label"
+          type: "string"
+        Conteudo:
+          description: "Conteudo"
+          type: "string"
+        Status:
+          description: "Status"
+          type: "string"
+        Icone3:
+          description: "Icone3"
+          type: "string"
+
+
+
+    SDDespesas_Level_DetailSdt:
+      properties:
+        Aprovacaodespesagridhorizontal:
+          description: "Aprovacao Despesa Grid Horizontal"
+          $ref: "#/components/schemas/AprovacaoDespesaGridHorizontal"
+        Aprovacaodespesasuperior:
+          description: "Aprovacao Despesa Superior"
+          $ref: "#/components/schemas/AprovacaoDespesaSuperior"
+        Aprovacaodespesalabelgrid:
+          description: "Aprovacao Despesa Label Grid"
+          $ref: "#/components/schemas/AprovacaoDespesaLabelGrid"
+        Principalbaixogridlabel:
+          description: "Principal Baixo Grid Label"
+          $ref: "#/components/schemas/PrincipalBaixoGridLabel"
+        Despesastatus:
+          description: "Despesastatus"
+          type: "integer"
+          format: "int32"
+        Date:
+          description: "Date"
+          type: "string"
+          format: "date"
+        Statusdespesa:
+          description: "Statusdespesa"
+          type: "integer"
+          format: "int64"
+        Key:
+          description: "Key"
+          type: "string"
+        Usuarioid:
+          description: "Usuarioid"
+          type: "integer"
+          format: "int64"
+        Isadmin:
+          description: "Isadmin"
+          type: "boolean"
+        Gxdynprop:
+          description: "Gxdynprop"
+          type: "string"
+
+
+
+    AprovacaoDespesaLabelGrid:
+      properties:
+        Esquerda:
+          description: "Esquerda"
+          type: "string"
+        Direita:
+          description: "Direita"
+          type: "string"
+
+
+
+    SDInsereDespesa_Level_DetailSdt:
+      properties:
+        Sdtetiquetacollection:
+          description: "SDTEtiqueta"
+          $ref: "#/components/schemas/SDTEtiqueta"
+        Auxsdtetiquetacollection:
+          description: "SDTEtiqueta"
+          $ref: "#/components/schemas/SDTEtiqueta"
+        Perfilcima:
+          description: "Perfil Cima"
+          $ref: "#/components/schemas/PerfilCima"
+        Usuariofoto:
+          description: "Usuariofoto"
+          type: "string"
+        Usuariofoto_GXI:
+          description: "Usuariofoto_GXI"
+          type: "string"
+        Despesadatahora:
+          description: "Despesadatahora"
+          type: "string"
+          format: "date-time"
+        Usuarionome:
+          description: "Usuarionome"
+          type: "string"
+        Icone:
+          description: "Icone"
+          type: "string"
+        Moedasigla:
+          description: "Moedasigla"
+          type: "string"
+        Projetonome:
+          description: "Projetonome"
+          type: "string"
+        Formapagamentonome:
+          description: "Formapagamentonome"
+          type: "string"
+        Clientenome:
+          description: "Clientenome"
+          type: "string"
+        Centrocustotitle:
+          description: "Centrocustotitle"
+          type: "string"
+        Filialnome:
+          description: "Filialnome"
+          type: "string"
+        Tipodespesadescricao:
+          description: "Tipodespesadescricao"
+          type: "string"
+        Despesavalor:
+          description: "Despesavalor"
+          type: "number"
+          format: "double"
+        Despesadescricao:
+          description: "Despesadescricao"
+          type: "string"
+        Contratodespesanome:
+          description: "Contratodespesanome"
+          type: "string"
+        Despesareembolsocliente:
+          description: "Despesareembolsocliente"
+          type: "integer"
+          format: "int32"
+        Status:
+          description: "Status"
+          type: "integer"
+          format: "int32"
+        Despesastatusvarchar:
+          description: "Despesastatusvarchar"
+          type: "string"
+        Despesamotivo:
+          description: "Despesamotivo"
+          type: "string"
+        Isrevisao:
+          description: "Isrevisao"
+          type: "boolean"
+        Isaprovacao:
+          description: "Isaprovacao"
+          type: "boolean"
+        Id:
+          description: "Id"
+          type: "integer"
+          format: "int64"
+        Despesagestorid:
+          description: "Despesagestorid"
+          type: "integer"
+          format: "int64"
+        Tela:
+          description: "Tela"
+          type: "integer"
+          format: "int32"
+        Key:
+          description: "Key"
+          type: "string"
+        Usuarioid:
+          description: "Usuarioid"
+          type: "integer"
+          format: "int64"
+        Centrocustoid:
+          description: "Centrocustoid"
+          type: "integer"
+          format: "int64"
+        Clienteid:
+          description: "Clienteid"
+          type: "integer"
+          format: "int64"
+        Contratodespesaid:
+          description: "Contratodespesaid"
+          type: "integer"
+          format: "int64"
+        Despesamoedaid:
+          description: "Despesamoedaid"
+          type: "integer"
+          format: "int64"
+        Despesaunidadeid:
+          description: "Despesaunidadeid"
+          type: "integer"
+          format: "int64"
+        Projetoid:
+          description: "Projetoid"
+          type: "integer"
+          format: "int64"
+        Formapagamentoid:
+          description: "Formapagamentoid"
+          type: "integer"
+          format: "int64"
+        Tipodespesaid:
+          description: "Tipodespesaid"
+          type: "integer"
+          format: "int64"
+        Despesausuarioid:
+          description: "Despesausuarioid"
+          type: "integer"
+          format: "int64"
+        Kminfo:
+          description: "Kminfo"
+          type: "number"
+          format: "double"
+        Kmcalculado:
+          description: "Kmcalculado"
+          type: "number"
+          format: "double"
+        Despesaorigemaddress:
+          description: "Despesaorigemaddress"
+          type: "string"
+        Despesaorigemgeolocation:
+          description: "Despesaorigemgeolocation"
+          type: "string"
+        Despesadestinoaddress:
+          description: "Despesadestinoaddress"
+          type: "string"
+        Despesadestinogeolocation:
+          description: "Despesadestinogeolocation"
+          type: "string"
+        Url:
+          description: "Url"
+          type: "string"
+        Despesanfcodigo:
+          description: "Despesanfcodigo"
+          type: "string"
+        Despesanfurl:
+          description: "Despesanfurl"
+          type: "string"
+        Ispendente:
+          description: "Ispendente"
+          type: "boolean"
+        Retorno:
+          description: "Retorno"
+          type: "integer"
+          format: "int32"
+        Today:
+          description: "Today"
+          type: "string"
+          format: "date"
+        Visivel:
+          description: "Visivel"
+          type: "integer"
+          format: "int32"
+        Visivel2:
+          description: "Visivel2"
+          type: "integer"
+          format: "int32"
+        Visivel3:
+          description: "Visivel3"
+          type: "integer"
+          format: "int32"
+        Statusdespesa:
+          description: "Statusdespesa"
+          type: "integer"
+          format: "int64"
+        Gxdynprop:
+          description: "Gxdynprop"
+          type: "string"
+        Gxdesc_contratodespesanome:
+          description: "Gxdesc_contratodespesanome"
+          type: "string"
+
+
+
+    PerfilCima:
+      properties:
+        IconeEsquerdaInferior:
+          description: "Icone Esquerda Inferior"
+          type: "string"
+        IconeCentro:
+          description: "Icone Centro"
+          type: "string"
+        UsuarioFoto:
+          description: "Usuario Foto"
+          type: "string"
+        IconeTabelaUsuario:
+          description: "Icone Tabela Usuario"
+          type: "string"
+        TextoTabelaUsuario:
+          description: "Texto Tabela Usuario"
+          type: "string"
+
+
+
+    SDInsereDespesaMultilplas_Level_DetailSdt:
+      properties:
+        Sdtdespesacollection:
+          description: "SDTDespesa"
+          $ref: "#/components/schemas/SDTDespesa"
+        Sdtetiquetacollection:
+          description: "SDTEtiqueta"
+          $ref: "#/components/schemas/SDTEtiqueta"
+        Auxsdtetiquetacollection:
+          description: "SDTEtiqueta"
+          $ref: "#/components/schemas/SDTEtiqueta"
+        Perfilcima:
+          description: "Perfil Cima"
+          $ref: "#/components/schemas/PerfilCima"
+        Usuariofoto:
+          description: "Usuariofoto"
+          type: "string"
+        Usuariofoto_GXI:
+          description: "Usuariofoto_GXI"
+          type: "string"
+        Usuarionome:
+          description: "Usuarionome"
+          type: "string"
+        Moedasigla:
+          description: "Moedasigla"
+          type: "string"
+        Projetonome:
+          description: "Projetonome"
+          type: "string"
+        Clientenome:
+          description: "Clientenome"
+          type: "string"
+        Filialnome:
+          description: "Filialnome"
+          type: "string"
+        Status:
+          description: "Status"
+          type: "integer"
+          format: "int32"
+        Despesastatusvarchar:
+          description: "Despesastatusvarchar"
+          type: "string"
+        Despesamotivo:
+          description: "Despesamotivo"
+          type: "string"
+        Id:
+          description: "Id"
+          type: "integer"
+          format: "int64"
+        Despesagestorid:
+          description: "Despesagestorid"
+          type: "integer"
+          format: "int64"
+        Key:
+          description: "Key"
+          type: "string"
+        Usuarioid:
+          description: "Usuarioid"
+          type: "integer"
+          format: "int64"
+        Contratodespesaid:
+          description: "Contratodespesaid"
+          type: "integer"
+          format: "int64"
+        Kminfo:
+          description: "Kminfo"
+          type: "number"
+          format: "double"
+        Kmcalculado:
+          description: "Kmcalculado"
+          type: "number"
+          format: "double"
+        Despesaorigemaddress:
+          description: "Despesaorigemaddress"
+          type: "string"
+        Despesaorigemgeolocation:
+          description: "Despesaorigemgeolocation"
+          type: "string"
+        Despesadestinoaddress:
+          description: "Despesadestinoaddress"
+          type: "string"
+        Despesadestinogeolocation:
+          description: "Despesadestinogeolocation"
+          type: "string"
+        Despesamoedaid:
+          description: "Despesamoedaid"
+          type: "integer"
+          format: "int64"
+        Clienteid:
+          description: "Clienteid"
+          type: "integer"
+          format: "int64"
+        Despesaunidadeid:
+          description: "Despesaunidadeid"
+          type: "integer"
+          format: "int64"
+        Projetoid:
+          description: "Projetoid"
+          type: "integer"
+          format: "int64"
+        Visivel:
+          description: "Visivel"
+          type: "integer"
+          format: "int32"
+        Visivel2:
+          description: "Visivel2"
+          type: "integer"
+          format: "int32"
+        Visivel3:
+          description: "Visivel3"
+          type: "integer"
+          format: "int32"
+        Num:
+          description: "Num"
+          type: "integer"
+          format: "int32"
+        Despesausuarioid:
+          description: "Despesausuarioid"
+          type: "integer"
+          format: "int64"
+        Retorno:
+          description: "Retorno"
+          type: "integer"
+          format: "int32"
+        Statusdespesa:
+          description: "Statusdespesa"
+          type: "integer"
+          format: "int64"
+        Gxdynprop:
+          description: "Gxdynprop"
+          type: "string"
+
+
+
+    SDInsereMultipla_Level_DetailSdt:
+      properties:
+        Perfilcima:
+          description: "Perfil Cima"
+          $ref: "#/components/schemas/PerfilCima"
+        Usuariofoto:
+          description: "Usuariofoto"
+          type: "string"
+        Usuariofoto_GXI:
+          description: "Usuariofoto_GXI"
+          type: "string"
+        Despesadatahora:
+          description: "Despesadatahora"
+          type: "string"
+          format: "date-time"
+        Formapagamentonome:
+          description: "Formapagamentonome"
+          type: "string"
+        Centrocustotitle:
+          description: "Centrocustotitle"
+          type: "string"
+        Tipodespesadescricao:
+          description: "Tipodespesadescricao"
+          type: "string"
+        Despesadescricao:
+          description: "Despesadescricao"
+          type: "string"
+        Despesareembolsocliente:
+          description: "Despesareembolsocliente"
+          type: "integer"
+          format: "int32"
+        Despesavalor:
+          description: "Despesavalor"
+          type: "number"
+          format: "double"
+        Tipodespesaid:
+          description: "Tipodespesaid"
+          type: "integer"
+          format: "int64"
+        Centrocustoid:
+          description: "Centrocustoid"
+          type: "integer"
+          format: "int64"
+        Formapagamentoid:
+          description: "Formapagamentoid"
+          type: "integer"
+          format: "int64"
+        Despesaunidadeid:
+          description: "Despesaunidadeid"
+          type: "integer"
+          format: "int64"
+        Projetoid:
+          description: "Projetoid"
+          type: "integer"
+          format: "int64"
+        Usuarioid:
+          description: "Usuarioid"
+          type: "integer"
+          format: "int64"
+        Today:
+          description: "Today"
+          type: "string"
+          format: "date"
+        Key:
+          description: "Key"
+          type: "string"
+        Visivel:
+          description: "Visivel"
+          type: "integer"
+          format: "int32"
+
+
+
+    SDNotificacao_Level_DetailSdt:
+      properties:
+        Gxprops_aprovacaodespesagrid:
+          description: "Gxprops_aprovacaodespesagrid"
+          type: "string"
+        Aprovacaodespesagrid:
+          description: "Aprovacao Despesa Grid"
+          $ref: "#/components/schemas/AprovacaoDespesaGrid"
+        Aprovacaodespesasuperior:
+          description: "Aprovacao Despesa Superior"
+          $ref: "#/components/schemas/AprovacaoDespesaSuperior"
+        Principalbaixogridlabel:
+          description: "Principal Baixo Grid Label"
+          $ref: "#/components/schemas/PrincipalBaixoGridLabel"
+        Sdtcontexto:
+          description: "SDTContexto"
+          $ref: "#/components/schemas/SDTContexto"
+        Key:
+          description: "Key"
+          type: "string"
+
+
+
+    SDPerfil_Level_DetailSdt:
+      properties:
+        Perfilcima:
+          description: "Perfil Cima"
+          $ref: "#/components/schemas/PerfilCima"
+        Usuariofoto:
+          description: "Usuariofoto"
+          type: "string"
+        Usuariofoto_GXI:
+          description: "Usuariofoto_GXI"
+          type: "string"
+        Icone1:
+          description: "Icone1"
+          type: "string"
+        Usuarionome:
+          description: "Usuarionome"
+          type: "string"
+        Seta:
+          description: "Seta"
+          type: "string"
+        Icone2:
+          description: "Icone2"
+          type: "string"
+        Usuarioemail:
+          description: "Usuarioemail"
+          type: "string"
+        Icone3:
+          description: "Icone3"
+          type: "string"
+        Usuariologin:
+          description: "Usuariologin"
+          type: "string"
+        Icone4:
+          description: "Icone4"
+          type: "string"
+        Usuariosenha:
+          description: "Usuariosenha"
+          type: "string"
+        Icone5:
+          description: "Icone5"
+          type: "string"
+        Usuariotelefone:
+          description: "Usuariotelefone"
+          type: "string"
+        Icone6:
+          description: "Icone6"
+          type: "string"
+        Usuariocelular:
+          description: "Usuariocelular"
+          type: "string"
+        Icone7:
+          description: "Icone7"
+          type: "string"
+        Centrocustoid:
+          description: "Centrocustoid"
+          type: "integer"
+          format: "int64"
+        Icone8:
+          description: "Icone8"
+          type: "string"
+        Filialid:
+          description: "Filialid"
+          type: "integer"
+          format: "int64"
+        Icone9:
+          description: "Icone9"
+          type: "string"
+        Checkin:
+          description: "Checkin"
+          type: "string"
+        Sdtcontexto:
+          description: "SDTContexto"
+          $ref: "#/components/schemas/SDTContexto"
+        Gxdesc_centrocustoid:
+          description: "Gxdesc_centrocustoid"
+          type: "string"
+        Gxdesc_filialid:
+          description: "Gxdesc_filialid"
+          type: "string"
+
+
+
+    SDRastreabilidade_Level_DetailSdt:
+      properties:
+        Gxprops_extrato:
+          description: "Gxprops_extrato"
+          type: "string"
+        Extrato:
+          description: "Extrato"
+          $ref: "#/components/schemas/Extrato"
+
+
+
+    Extrato:
+      properties:
+        Categoria:
+          description: "Categoria"
+          type: "string"
+        Texto:
+          description: "Texto"
+          type: "string"
+        Subtexto:
+          description: "Subtexto"
+          type: "string"
+        Dia:
+          description: "Dia"
+          type: "string"
+        Icone:
+          description: "Icone"
+          type: "string"
+        Obs:
+          description: "Obs"
+          type: "string"
+
+
+
+    SDSelecaoCentroCusto_Level_Detail_Grid1Sdt_Item:
+      properties:
+        CentroCustoId2:
+          description: "Centro Custo Id2"
+          type: "integer"
+          format: "int64"
+        CentroCustoTitle:
+          description: "Centro Custo Title"
+          type: "string"
+
+
+
+    SDSelecaoCliente_Level_Detail_Grid1Sdt_Item:
+      properties:
+        ClienteId7:
+          description: "Cliente Id7"
+          type: "integer"
+          format: "int64"
+        ClienteNome:
+          description: "Cliente Nome"
+          type: "string"
+
+
+
+    SDSelecaoContratoDespesa_Level_Detail_Grid1Sdt_Item:
+      properties:
+        ContratoDespesaId:
+          description: "Contrato Despesa Id"
+          type: "integer"
+          format: "int64"
+        ContratoDespesaNome:
+          description: "Contrato Despesa Nome"
+          type: "string"
+
+
+
+    SDSelecaoFilial_Level_Detail_Grid1Sdt_Item:
+      properties:
+        FilialId3:
+          description: "Filial Id3"
+          type: "integer"
+          format: "int64"
+        FilialNome:
+          description: "Filial Nome"
+          type: "string"
+
+
+
+    SDSelecaoFormaPagto_Level_Detail_Grid1Sdt_Item:
+      properties:
+        FormaPagamentoId:
+          description: "Forma Pagamento Id"
+          type: "integer"
+          format: "int64"
+        FormaPagamentoNome:
+          description: "Forma Pagamento Nome"
+          type: "string"
+
+
+
+    SDSelecaoMoeda_Level_Detail_Grid1Sdt_Item:
+      properties:
+        MoedaId2:
+          description: "Moeda Id2"
+          type: "integer"
+          format: "int64"
+        MoedaSigla:
+          description: "Moeda Sigla"
+          type: "string"
+
+
+
+    SDSelecaoProjeto_Level_Detail_Grid1Sdt_Item:
+      properties:
+        ProjetoId:
+          description: "Projeto Id"
+          type: "integer"
+          format: "int64"
+        ProjetoNome:
+          description: "Projeto Nome"
+          type: "string"
+
+
+
+    SDSelecaoTipoDespesa_Level_Detail_Grid1Sdt_Item:
+      properties:
+        TipoDespesaId:
+          description: "Tipo Despesa Id"
+          type: "integer"
+          format: "int64"
+        TipoDespesaDescricao:
+          description: "Tipo Despesa Descricao"
+          type: "string"
+
+
+
+    SDSelecaoUsuario_Level_Detail_Grid1Sdt_Item:
+      properties:
+        UsuarioId:
+          description: "Usuario Id"
+          type: "integer"
+          format: "int64"
+        UsuarioNome:
+          description: "Usuario Nome"
+          type: "string"
+
+
+
+    TelaBemVindo_Level_DetailSdt:
+      properties:
+        Gxdynprop:
+          description: "Gxdynprop"
+          type: "string"
+
+
+
+ 
